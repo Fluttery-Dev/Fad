@@ -1,5 +1,4 @@
 import 'package:fad/features/auth/widgets/video_background.dart';
-import 'package:fad/features/premium/premium.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

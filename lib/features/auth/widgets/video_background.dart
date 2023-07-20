@@ -34,8 +34,10 @@ class _VideoBackgroundState extends State<VideoBackground> {
         Timer(
           const Duration(milliseconds: 100),
           () {
-            _videoPlayerController.play();
-            _visible = true;
+            setState(() {
+              _videoPlayerController.play();
+              _visible = true;
+            });
           },
         );
       },
@@ -44,7 +46,7 @@ class _VideoBackgroundState extends State<VideoBackground> {
 
   @override
   Widget build(BuildContext context) {
-    final _videoBackground = Container(
+    final videoBackground = SizedBox(
       height: screenHeight * 0.55,
       width: screenWidth,
       child: ClipRect(
@@ -58,23 +60,40 @@ class _VideoBackgroundState extends State<VideoBackground> {
       ),
     );
 
-    final _mainContent = Align(
+    final mainContent = Align(
       alignment: Alignment.bottomCenter,
       child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
         height: screenHeight * 0.55,
+        width: screenWidth,
         decoration: BoxDecoration(
-          color: Colors.blue,
+          color: Colors.black,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(50.r),
             topRight: Radius.circular(50.r),
           ),
+        ),
+        child: Column(
+          children: [
+            Text(
+              "Welcome, Influencer",
+              style: const TextStyle(
+                fontFamily: "Montserrat",
+                fontSize: 25,
+                fontWeight: FontWeight.w700,
+                color: Color(0xfff5f5f7),
+                height: 36 / 25,
+              ),
+              textAlign: TextAlign.left,
+            )
+          ],
         ),
       ),
     );
 
     return Scaffold(
       body: Stack(
-        children: [_videoBackground, _mainContent],
+        children: [videoBackground, mainContent],
       ),
     );
   }
