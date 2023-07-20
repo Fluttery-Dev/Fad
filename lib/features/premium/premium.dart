@@ -48,8 +48,8 @@ class PremiumIntro extends StatelessWidget {
                   Page1(
                     nextPage: nextpage,
                   ),
-                  Page2(),
-                  Page3(),
+                  const Page2(),
+                  const Page3(),
                 ],
               ),
             ),

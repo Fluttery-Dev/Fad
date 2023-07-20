@@ -1,3 +1,4 @@
+import 'package:fad/common/styling.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,15 +10,9 @@ class Page2 extends StatelessWidget {
   });
 
   @override
-  @override
   Widget build(BuildContext context) {
-    final TextStyle textSpanStyle = TextStyle(
-      color: Colors.white,
-      fontSize: 22.sp,
-      fontFamily: 'Inter',
-      fontWeight: FontWeight.normal,
-    );
     return PremiumPlans(
+      price: '99',
       headLine: 'Basic',
       colors: const [
         Color(0xFFFF04DF),
@@ -25,7 +20,7 @@ class Page2 extends StatelessWidget {
       ],
       textSpans: [
         TextSpan(
-          style: textSpanStyle,
+          style: TextStyles.textSpanStyle,
           children: const [
             TextSpan(
               text: '0.5x',
@@ -38,10 +33,10 @@ class Page2 extends StatelessWidget {
         ),
         TextSpan(
           text: '2 Boosts.',
-          style: textSpanStyle.copyWith(fontWeight: FontWeight.w700),
+          style: TextStyles.textSpanStyle.copyWith(fontWeight: FontWeight.w700),
         ),
         TextSpan(
-          style: textSpanStyle,
+          style: TextStyles.textSpanStyle,
           children: const [
             TextSpan(text: 'Join'),
             TextSpan(
@@ -54,7 +49,7 @@ class Page2 extends StatelessWidget {
           ],
         ),
         TextSpan(
-          style: textSpanStyle,
+          style: TextStyles.textSpanStyle,
           children: const [
             TextSpan(
               text: '100 messages/day',
@@ -68,7 +63,7 @@ class Page2 extends StatelessWidget {
           ],
         ),
         TextSpan(
-          style: textSpanStyle,
+          style: TextStyles.textSpanStyle,
           children: const [
             TextSpan(text: 'See who '),
             TextSpan(

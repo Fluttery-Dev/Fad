@@ -39,28 +39,14 @@ class Page1 extends StatelessWidget {
                   children: [
                     Text(
                       'Get More',
-                      style: TextStyle(
-                        fontSize: 25.sp,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.white,
-                      ),
+                      style: TextStyles.subTitle
+                          .copyWith(fontWeight: FontWeight.normal),
                     ),
-                    Text(
-                      'With Premium',
-                      style: TextStyle(
-                        fontSize: 30.sp,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                      ),
-                    ),
+                    Text('With Premium', style: TextStyles.title),
                     Gap(20.h),
                     Text(
                         "Choose a plan and get more out of your account. Join Premium today!",
-                        style: TextStyle(
-                          fontSize: 20.h,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white,
-                        ))
+                        style: TextStyles.descp),
                   ],
                 ),
               ),

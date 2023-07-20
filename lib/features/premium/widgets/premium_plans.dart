@@ -1,10 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:fad/features/premium/widgets/bulleted_text.dart';
+import 'package:dotted_line/dotted_line.dart';
+import 'package:fad/features/premium/widgets/subscribe_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
-import 'package:fad/common/styling.dart';
+import 'package:fad/features/premium/widgets/bulleted_text.dart';
 
 class PremiumPlans extends StatelessWidget {
   const PremiumPlans({
@@ -12,10 +13,12 @@ class PremiumPlans extends StatelessWidget {
     required this.colors,
     required this.headLine,
     required this.textSpans,
+    required this.price,
   }) : super(key: key);
   final List<Color> colors;
   final String headLine;
   final List<TextSpan> textSpans;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +56,7 @@ class PremiumPlans extends StatelessWidget {
               ),
             ],
           ),
-          Gap(35.h),
+          Gap(25.h),
           Text(
             'What You’ll Get',
             style: TextStyle(
@@ -63,9 +66,36 @@ class PremiumPlans extends StatelessWidget {
               fontWeight: FontWeight.w400,
             ),
           ),
-          Gap(20.h),
+          Gap(10.h),
           ...textSpans.map((e) => BulletedText(text: e)).toList(),
-          Divider(indent: 5.w),
+          DottedLine(dashColor: Colors.white, dashGapLength: 5.w),
+          Gap(20.h),
+          RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: '₹${price}',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35.sp,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                TextSpan(
+                  text: '/month',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.sp,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Spacer(),
+          SubscribeButton(),
         ],
       ),
     );
