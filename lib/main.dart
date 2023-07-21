@@ -1,7 +1,4 @@
-import 'package:fad/features/auth/sign_in/widgets/sign_in.dart';
-import 'package:fad/features/auth/sign_in/widgets/sign_in_common.dart';
-import 'package:fad/features/auth/widgets/auth_input.dart';
-import 'package:fad/features/auth/widgets/video_background.dart';
+import 'package:fad/features/auth/sign_up/pages/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -29,7 +26,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: SignIn(),
+        home: const SignUp(),
       ),
     );
   }

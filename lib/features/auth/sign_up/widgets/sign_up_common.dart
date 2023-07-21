@@ -5,8 +5,8 @@ import 'package:gap/gap.dart';
 
 import '../../../../common/styling.dart';
 
-class SignInCommon extends StatelessWidget {
-  const SignInCommon({
+class SignUpCommon extends StatelessWidget {
+  const SignUpCommon({
     Key? key,
     required this.mainLoginContent,
   }) : super(key: key);
@@ -41,34 +41,25 @@ class SignInCommon extends StatelessWidget {
             ),
             Gap(10.w),
             Text(
-              "Sign in with Google",
+              "Sign Up with Google",
               style: TextStyles.descp,
             ),
           ],
         ),
         const Spacer(),
         Text(
-          "Don't have an account yet ? ",
+          "Already have an account? ",
           style: TextStyles.descpSmall,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              child: Text(
-                'Sign Up',
-                style: TextStyles.descpSmall.copyWith(
-                    decoration: TextDecoration.underline,
-                    color: const Color(0xFFFF005B),
-                    decorationColor: const Color(0xFFFF005B)),
-              ),
-            ),
-            Text(
-              ' now and become a Fadist today!',
-              style: TextStyles.descpSmall,
-            ),
-          ],
-        )
+        GestureDetector(
+          child: Text(
+            'Sign In',
+            style: TextStyles.descpSmall.copyWith(
+                decoration: TextDecoration.underline,
+                color: const Color(0xFFFF005B),
+                decorationColor: const Color(0xFFFF005B)),
+          ),
+        ),
       ],
     );
   }

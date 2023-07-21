@@ -1,5 +1,4 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:fad/common/styling.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,14 +8,19 @@ class AuthInput extends StatelessWidget {
     required this.controller,
     required this.hintText,
     this.keyboardType = TextInputType.text,
+    this.inputVisible = true,
   }) : super(key: key);
   final TextEditingController controller;
   final String hintText;
   final TextInputType? keyboardType;
+  final bool inputVisible;
+
   @override
   Widget build(BuildContext context) {
     return TextField(
       // style: TextStyles.subTitle,
+      obscureText: !inputVisible,
+      obscuringCharacter: '*',
       controller: controller,
       keyboardType: keyboardType,
       decoration: InputDecoration(
