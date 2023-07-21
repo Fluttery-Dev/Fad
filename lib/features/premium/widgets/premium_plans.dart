@@ -74,7 +74,7 @@ class PremiumPlans extends StatelessWidget {
             text: TextSpan(
               children: [
                 TextSpan(
-                  text: '₹${price}',
+                  text: '₹$price',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 35.sp,
@@ -95,7 +95,7 @@ class PremiumPlans extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          SubscribeButton(),
+          const SubscribeButton(),
         ],
       ),
     );

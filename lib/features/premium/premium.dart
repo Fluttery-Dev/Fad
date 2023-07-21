@@ -18,7 +18,7 @@ class PremiumIntro extends StatelessWidget {
     );
     void nextpage() {
       pageController.nextPage(
-          duration: Duration(milliseconds: 500), curve: Curves.easeIn);
+          duration: const Duration(milliseconds: 500), curve: Curves.easeIn);
     }
 
     return SafeArea(
