@@ -1,12 +1,19 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:async';
 
-import 'package:fad/common/styling.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:video_player/video_player.dart';
 
+import 'package:fad/common/styling.dart';
+
 class VideoBackground extends StatefulWidget {
-  const VideoBackground({super.key});
+  const VideoBackground({
+    Key? key,
+    required this.mainContent,
+  }) : super(key: key);
+
+  final Widget mainContent;
 
   @override
   State<VideoBackground> createState() => _VideoBackgroundState();
@@ -63,7 +70,7 @@ class _VideoBackgroundState extends State<VideoBackground> {
     final mainContent = Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+        padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 10.h),
         height: screenHeight * 0.55,
         width: screenWidth,
         decoration: BoxDecoration(
@@ -73,21 +80,7 @@ class _VideoBackgroundState extends State<VideoBackground> {
             topRight: Radius.circular(50.r),
           ),
         ),
-        child: Column(
-          children: [
-            Text(
-              "Welcome, Influencer",
-              style: const TextStyle(
-                fontFamily: "Montserrat",
-                fontSize: 25,
-                fontWeight: FontWeight.w700,
-                color: Color(0xfff5f5f7),
-                height: 36 / 25,
-              ),
-              textAlign: TextAlign.left,
-            )
-          ],
-        ),
+        child: widget.mainContent,
       ),
     );
 

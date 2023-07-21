@@ -1,3 +1,5 @@
+import 'package:fad/features/auth/sign_in/widgets/sign_in_common.dart';
+import 'package:fad/features/auth/widgets/auth_input.dart';
 import 'package:fad/features/auth/widgets/video_background.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -26,7 +28,13 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const VideoBackground(),
+        home: VideoBackground(
+          mainContent: SignInCommon(
+            mainLoginContent: Placeholder(
+              fallbackHeight: 200.h,
+            ),
+          ),
+        ),
       ),
     );
   }
