@@ -1,4 +1,6 @@
 import 'package:fad/common/styling.dart';
+import 'package:fad/features/auth/sign_up/widgets/face_verification.dart';
+import 'package:fad/features/auth/sign_up/widgets/interest_selection.dart';
 import 'package:fad/features/auth/sign_up/widgets/phone_verification.dart';
 import 'package:fad/features/auth/sign_up/widgets/sign_up_page_1.dart';
 import 'package:fad/features/auth/sign_up/widgets/username_page.dart';
@@ -30,6 +32,10 @@ class SignUp extends StatelessWidget {
         nextPage: nextPage,
       ),
       UsernameInput(nextPage: nextPage),
+      InterestSelection(
+        nextPage: nextPage,
+      ),
+      FaceVerification(),
     ];
     return VideoBackground(
       mainContent: SizedBox(
