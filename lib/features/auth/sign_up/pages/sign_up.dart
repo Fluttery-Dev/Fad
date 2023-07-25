@@ -1,4 +1,3 @@
-import 'package:fad/common/styling.dart';
 import 'package:fad/features/auth/sign_up/widgets/face_verification.dart';
 import 'package:fad/features/auth/sign_up/widgets/interest_selection.dart';
 import 'package:fad/features/auth/sign_up/widgets/phone_verification.dart';
@@ -8,7 +7,6 @@ import 'package:fad/features/auth/widgets/video_background.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/pin_input.dart';
-import '../widgets/sign_up_common.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({
