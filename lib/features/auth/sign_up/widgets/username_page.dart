@@ -1,13 +1,20 @@
-import 'package:fad/common/styling.dart';
-import 'package:fad/features/auth/widgets/auth_input.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
+import 'package:fad/common/styling.dart';
+import 'package:fad/features/auth/widgets/auth_input.dart';
+
 class UsernameInput extends StatelessWidget {
-  const UsernameInput({super.key, required this.nextPage});
+  const UsernameInput({
+    Key? key,
+    required this.nextPage,
+    required this.prevPage,
+  }) : super(key: key);
 
   final void Function() nextPage;
+  final void Function() prevPage;
 
   @override
   Widget build(BuildContext context) {

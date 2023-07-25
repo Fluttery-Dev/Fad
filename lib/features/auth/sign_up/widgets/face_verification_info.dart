@@ -128,8 +128,8 @@ class _ConfirmState extends State<Confirm> {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(20.r),
-              child: Image.file(
-                widget.image,
+              child: Image.asset(
+                'assets/images/face_verify.png',
                 fit: BoxFit.fill,
                 width: 140.w,
                 height: 200.h,
@@ -138,8 +138,8 @@ class _ConfirmState extends State<Confirm> {
             Gap(10.w),
             ClipRRect(
               borderRadius: BorderRadius.circular(20.r),
-              child: Image.asset(
-                'assets/images/face_verify.png',
+              child: Image.file(
+                widget.image,
                 fit: BoxFit.fill,
                 width: 140.w,
                 height: 200.h,

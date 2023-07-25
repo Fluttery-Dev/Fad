@@ -21,6 +21,13 @@ class SignUp extends StatelessWidget {
     );
   }
 
+  void prevPage() {
+    _pageController.previousPage(
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.ease,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final signUpPages = [
@@ -29,7 +36,10 @@ class SignUp extends StatelessWidget {
       OtpVerification(
         nextPage: nextPage,
       ),
-      UsernameInput(nextPage: nextPage),
+      UsernameInput(
+        nextPage: nextPage,
+        prevPage: prevPage,
+      ),
       InterestSelection(
         nextPage: nextPage,
       ),

@@ -18,6 +18,19 @@ class OtpVerification extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final defaultPinTheme = PinTheme(
+      width: 60.w,
+      height: 70.h,
+      textStyle: TextStyle(
+          fontSize: 20.sp,
+          color: Color.fromRGBO(30, 60, 87, 1),
+          fontWeight: FontWeight.w600),
+      decoration: BoxDecoration(
+        border: Border.all(color: Color.fromRGBO(234, 239, 243, 1)),
+        borderRadius: BorderRadius.circular(10.r),
+        color: Colors.white,
+      ),
+    );
     return SignUpCommon(
       mainLoginContent: Column(
         mainAxisSize: MainAxisSize.min,
@@ -29,6 +42,7 @@ class OtpVerification extends StatelessWidget {
           ),
           Gap(20.h),
           Pinput(
+            defaultPinTheme: defaultPinTheme,
             controller: _pinController,
             length: 4,
           ),
