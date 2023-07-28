@@ -56,8 +56,8 @@ class SignUpCommon extends StatelessWidget {
             'Sign In',
             style: TextStyles.descpSmall.copyWith(
                 decoration: TextDecoration.underline,
-                color: const Color(0xFFFF005B),
-                decorationColor: const Color(0xFFFF005B)),
+                color: appPink,
+                decorationColor: appPink),
           ),
         ),
       ],

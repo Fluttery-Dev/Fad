@@ -49,7 +49,7 @@ class OtpVerification extends StatelessWidget {
           Gap(20.h),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFFFF005B),
+              backgroundColor: appPink,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.r),
               ),

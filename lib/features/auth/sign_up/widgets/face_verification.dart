@@ -26,7 +26,7 @@ class FaceVerification extends StatelessWidget {
           height: 50.w,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFFFF005B),
+              backgroundColor: appPink,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.r),
               ),

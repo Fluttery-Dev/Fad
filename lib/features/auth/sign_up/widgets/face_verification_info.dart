@@ -63,7 +63,7 @@ class _FaceVerificationInfoDialogState
         Gap(20.h),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFFFF005B),
+            backgroundColor: appPink,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.r),
             ),
@@ -156,7 +156,7 @@ class _ConfirmState extends State<Confirm> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFFF005B),
+                  backgroundColor: appPink,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.r),
                   ),

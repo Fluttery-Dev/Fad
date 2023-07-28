@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 double screenWidth = 390.w;
 double screenHeight = 844.h;
+const Color appPink = Color(0xFFFF005B);
 
 class TextStyles {
   static TextStyle title = TextStyle(

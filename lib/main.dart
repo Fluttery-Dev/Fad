@@ -1,4 +1,8 @@
 import 'package:fad/features/auth/sign_up/pages/sign_up.dart';
+import 'package:fad/features/homepage/pages/homepage.dart';
+import 'package:fad/features/miscellaneous/pages/info_page.dart';
+import 'package:fad/features/miscellaneous/pages/rewards.dart';
+import 'package:fad/features/premium/premium.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -28,7 +32,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: SignUp(),
+          home: RewardsPage(),
         ),
       ),
     );
