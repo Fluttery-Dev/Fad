@@ -1,11 +1,12 @@
 import 'package:fad/features/miscellaneous/pages/rewards.dart';
+import 'package:fad/features/profile/pages/t.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'features/profile/pages/view_profile.dart';
+//import 'features/profile/pages/view_profile.dart';
 
 void main() {
   runApp(const MyApp());
