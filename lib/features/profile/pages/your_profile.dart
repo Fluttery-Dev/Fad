@@ -38,7 +38,16 @@ class _ViewProfileState extends ConsumerState<ViewProfile>
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          leading: BackIcon(),
+          leading: const BackIcon(),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.settings_outlined,
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -107,40 +116,20 @@ class _ViewProfileState extends ConsumerState<ViewProfile>
                           softWrap: true,
                         ),
                         Gap(20.h),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: appPink,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.r),
-                                ),
-                              ),
-                              child: Text(
-                                'Follow',
-                                style: TextStyles.descp.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: appPink,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.r),
                             ),
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: appPink,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.r),
-                                ),
-                              ),
-                              child: Text(
-                                'Interact',
-                                style: TextStyles.descp.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                          ),
+                          child: Text(
+                            'Edit Profile',
+                            style: TextStyles.descp.copyWith(
+                              fontWeight: FontWeight.bold,
                             ),
-                          ],
+                          ),
                         ),
                         const Spacer(),
                       ],

@@ -1,4 +1,5 @@
 import 'package:fad/common/styling.dart';
+import 'package:fad/common/widgets/back_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -23,22 +24,17 @@ class PremiumIntro extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          leading: const BackIcon(),
+          title: Text(
+            'Premium Plans',
+            style: TextStyles.title,
+          ),
+        ),
         body: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                IconButton(
-                  onPressed: () => Navigator.of(context).pop(),
-                  icon: const Icon(Icons.arrow_back_ios_new_rounded),
-                ),
-                Gap(70.w),
-                Text(
-                  'Premium Plans',
-                  style: TextStyles.title,
-                ),
-              ],
-            ),
             Gap(10.h),
             SizedBox(
               height: screenHeight * 0.8,

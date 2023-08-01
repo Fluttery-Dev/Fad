@@ -1,4 +1,6 @@
 import 'package:fad/features/miscellaneous/pages/rewards.dart';
+import 'package:fad/features/profile/pages/edit_profile.dart';
+import 'package:fad/features/settings/pages/settings.dart';
 //import 'package:fad/features/profile/pages/t.dart';
 
 import 'package:flutter/material.dart';
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: ViewProfile(),
+          home: const EditProfile(),
         ),
       ),
     );

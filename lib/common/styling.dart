@@ -18,6 +18,9 @@ class TextStyles {
     fontWeight: FontWeight.normal,
     color: Colors.white,
   );
+  static TextStyle subTitleBold = TextStyles.subTitle.copyWith(
+    fontWeight: FontWeight.bold,
+  );
 
   static TextStyle descp = TextStyle(
     fontFamily: 'Montserrat',
