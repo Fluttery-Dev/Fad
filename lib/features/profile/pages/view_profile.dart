@@ -16,7 +16,11 @@ class _ViewProfileState extends ConsumerState<ViewProfile>
     with TickerProviderStateMixin {
   final posts = [
     'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?cs=srgb&dl=pexels-konstantin-mishchenko-1926769.jpg&fm=jpg',
-    'https://images.unsplash.com/photo-1619086303291-0ef7699e4b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fHww&w=1000&q=80',
+    'https://media.istockphoto.com/id/1297633362/photo/her-beauty-makes-it-hard-not-to-stare.jpg?s=612x612&w=0&k=20&c=_9EUpPSnGGbnkD-Ejfa-wTcso_ET10QQhpgglHcyUyM=',
+    'https://media.istockphoto.com/id/1294339577/photo/young-beautiful-woman.jpg?s=612x612&w=0&k=20&c=v41m_jNzYXQtxrr8lZ9dE8hH3CGWh6HqpieWkdaMAAM=',
+    'https://img.freepik.com/free-photo/high-fashion-look-glamor-closeup-portrait-beautiful-sexy-stylish-caucasian-young-woman-model_158538-2774.jpg?w=2000',
+    'https://hips.hearstapps.com/hmg-prod/images/gettyimages-610398742-1538405260.jpg?resize=480:*',
+    'https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?cs=srgb&dl=pexels-ali-pazani-2681751.jpg&fm=jpg'
   ];
   // DefaultTabController _tabController = DefaultTabController(length: 2, child: )
   late TabController _tabController;
@@ -53,81 +57,83 @@ class _ViewProfileState extends ConsumerState<ViewProfile>
                 SliverAppBar(
                   backgroundColor: Colors.transparent,
                   expandedHeight: screenHeight * 0.45,
-                  flexibleSpace: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                '6\nPosts',
-                                textAlign: TextAlign.center,
-                                style: TextStyles.subTitle,
-                              ),
-                              Text(
-                                '10\nFollowers',
-                                textAlign: TextAlign.center,
-                                style: TextStyles.subTitle,
-                              ),
-                            ],
-                          ),
-                          CircleAvatar(
-                            backgroundImage: const AssetImage(
-                              'assets/images/profile.png',
+                  flexibleSpace: FlexibleSpaceBar(
+                    background: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '6\nPosts',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyles.subTitle,
+                                ),
+                                Text(
+                                  '10\nFollowers',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyles.subTitle,
+                                ),
+                              ],
                             ),
-                            radius: 60.r,
+                            CircleAvatar(
+                              backgroundImage: const AssetImage(
+                                'assets/images/profile.png',
+                              ),
+                              radius: 60.r,
+                            ),
+                          ],
+                        ),
+                        Gap(20.h),
+                        Text(
+                          'Lokesh Mishra',
+                          style: TextStyles.title,
+                        ),
+                        Gap(5.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.star_border_outlined,
+                              color: Colors.white,
+                              size: 25.r,
+                            ),
+                            Gap(5.w),
+                            Text(
+                              'Level 20',
+                              style: TextStyles.descp,
+                            ),
+                          ],
+                        ),
+                        Gap(20.h),
+                        Text(
+                          "Hi there! I'm Elizabeth \nbut you can call me Liz!",
+                          style: TextStyles.descp,
+                          softWrap: true,
+                        ),
+                        Gap(20.h),
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: appPink,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.r),
+                            ),
                           ),
-                        ],
-                      ),
-                      Gap(20.h),
-                      Text(
-                        'Lokesh Mishra',
-                        style: TextStyles.title,
-                      ),
-                      Gap(5.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.star_border_outlined,
-                            color: Colors.white,
-                            size: 25.r,
-                          ),
-                          Gap(5.w),
-                          Text(
-                            'Level 20',
-                            style: TextStyles.descp,
-                          ),
-                        ],
-                      ),
-                      Gap(20.h),
-                      Text(
-                        "Hi there! I'm Elizabeth \nbut you can call me Liz!",
-                        style: TextStyles.descp,
-                        softWrap: true,
-                      ),
-                      Gap(20.h),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: appPink,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.r),
+                          child: Text(
+                            'Edit Profile',
+                            style: TextStyles.descp.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
-                        child: Text(
-                          'Edit Profile',
-                          style: TextStyles.descp.copyWith(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      const Spacer(),
-                    ],
+                        const Spacer(),
+                      ],
+                    ),
                   ),
                 ),
               ];
