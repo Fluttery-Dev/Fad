@@ -1,16 +1,19 @@
 # fad
 
-A new Flutter project.
+The Project was for a Client which had to be abruptly shut down.
 
-## Getting Started
+All the designs and animations were created as per the designs of the client.
 
-This project is a starting point for a Flutter application.
+To run app : 
+DownLoad the zip file and extract it. 
+Open it in IDE
+Type "Flutter Pub Get" on terminal
+Then run the app on emulator
 
-A few resources to get you started if this is your first Flutter project:
+As the app is not complete you might have to change the page you want to see in the main.dart file.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+
